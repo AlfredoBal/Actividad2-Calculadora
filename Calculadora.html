@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/Diseño.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content content--datos">
+        <section class="encabezado">
+          <div class="img">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/59/Logo_utm.png"
+              alt="UTM"
+              title="UTM"
+              class="img-logo"
+            />
+          </div>
+          <h1 class="title">Calculadora Cientifica</h1>
+        </section>
+        <section class="enunciado">
+          <h2 class="title subtitle">Trabajo autónomo</h2>
+          <p class="paragraph">
+            Revise la documentación y desarrollar una calculadora utilizando html, css y js que realice las 4 operaciones básicas,
+            además de limpiar la pantalla de los valores ingresados por teclado y ponerlo en el repositorio.
+ 
+          </p>
+               <aside>
+        <div class="content content--perfil">
+          <div class="perfil">
+            <h3 class="title subtitle">Alfredo Balderramo</h3>
+          </div>
+          <div class="datos">
+            <p class="perfil__datos">Ingeniería en Tecnologías de la Información (TI)</p>
+            <p class="perfil__datos">Sexto Semestre</p>
+            <p class="perfil__datos">09-06-2023</p>
+          </div>
+        </div>
+          </div>
+              </aside>
+              <script>
+                var op = 0, aux1 = 0, aux2 = 0, memoria = 0;
+                function siete() {
+                    document.getElementById("disp").value = document.getElementById("disp").value + "7";
+                }
+                function ocho() {
+                    document.getElementById("disp").value = document.getElementById("disp").value + "8";
+                }
+                function nueve() {
+                    document.getElementById("disp").value = document.getElementById("disp").value + "9";
+                }
+        
+                function cuatro() {
+                    document.getElementById("disp").value = document.getElementById("disp").value + "4";
+                }
+                function cinco() {
+                    document.getElementById("disp").value = document.getElementById("disp").value + "5";
+                }
+                function seis() {
+                    document.getElementById("disp").value = document.getElementById("disp").value + "6";
+                }
+        
+                function uno() {
+                    document.getElementById("disp").value = document.getElementById("disp").value + "1";
+                }
+                function dos() {
+                    document.getElementById("disp").value = document.getElementById("disp").value + "2";
+                }
+                function tres() {
+                    document.getElementById("disp").value = document.getElementById("disp").value + "3";
+                }
+                function cero() {
+        
+                    document.getElementById("disp").value = document.getElementById("disp").value + "0";
+                }
+                function punto() {
+        
+                    document.getElementById("disp").value = document.getElementById("disp").value + ".";
+                }
+                function limpiar() {
+                    document.getElementById("disp").value = "";
+        
+                }
+                function suma() {
+                    op = 1;
+                    ope1 = document.getElementById("disp").value;
+                    document.getElementById("disp").value = "";
+        
+                }
+                function resta() {
+                    op = 2;
+                    ope1 = document.getElementById("disp").value;
+                    document.getElementById("disp").value = "";
+        
+                }
+        
+                function multi() {
+                    op = 3
+                    ope1 = document.getElementById("disp").value;
+                    document.getElementById("disp").value = "";
+                }
+                function divi() {
+                    op = 4;
+                    ope1 = document.getElementById("disp").value;
+                    document.getElementById("disp").value = "";
+        
+                }
+        
+                function porcentaje(){
+        
+                    let porcen=0;
+                    ope2 = document.getElementById("disp").value;
+                    ope2 = parseFloat(ope2);
+                    porcen = ope2 / 100;
+                    document.getElementById("disp").value = porcen;
+        
+                }
+        
+                function aro (){
+                    if (mem == 0){
+                        mem = document.getElementById("disp").value;
+                    }else{
+                        document.getElementById("disp").value = mem;
+                    }
+                }
+        
+                function x (){
+                    let cuadrado = 0;
+                    ope1 = document.getElementById("disp").value;
+                    ope1 = parseFloat(ope1);
+                    cuadrado = ope1**(2);
+                    document.getElementById("disp").value = cuadrado;
+                }
+        
+        
+                function igual() {
+        
+                    if (document.getElementById("disp").value == "") {
+        
+                        ope2 = ope1;
+                    }
+                    else {
+                        ope2 = document.getElementById("disp").value;
+                    }
+        
+                    ope1 = parseFloat(ope1);
+                    ope2 = parseFloat(ope2);
+                    switch (op) {
+                        case 1:
+                            resu = ope1 + ope2;
+                            break;
+                        case 2:
+                            resu = ope1 - ope2;
+                            break;
+                        case 3:
+                            resu = ope1 * ope2
+                            break;
+                        case 4:
+        
+                            resu = ope1 / op2;
+        
+                        default:
+                            alert("Opción incorrecta...");
+                    }
+        
+                    document.getElementById("disp").value = resu;
+        
+                }
+                function porcentaje(){
+
+               let porcen=0;
+               ope2 = document.getElementById("disp").value;
+               ope2 = parseFloat(ope2);
+               porcen = ope2 / 100;
+               document.getElementById("disp").value = porcen;
+
+}
+
+               function mori() {
+                if (memoria == 0) {
+                    memoria = document.getElementById("disp").value;
+                } else {
+                    document.getElementById("disp").value = memoria;
+                }
+            }
+
+             function x (){
+             let raiz = 0;
+             ope1 = document.getElementById("disp").value;
+             ope1 = parseFloat(ope1);
+             raiz = ope1**(2);
+             document.getElementById("disp").value = raiz;
+            }
+        
+            </script>
+        
+        <script>
+            var op = 0, aux1 = 0, aux2 = 0, memoria = 0;
+
+            function seno() {
+                let sen = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseFloat(ope1);
+                ope1 = ope1 * (Math.PI / 180);
+                sen = Math.sin(ope1);
+                document.getElementById("disp").value = sen;
+            }
+            function coseno() {
+                let cos = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseFloat(ope1);
+                ope1 = ope1 * (Math.PI / 180);
+                cos = Math.cos(ope1);
+                document.getElementById("disp").value = cos;
+            }
+            function tangente() {
+                let tan = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseFloat(ope1);
+                ope1 = ope1 * (Math.PI / 180);
+                tan = Math.tan(ope1);
+                document.getElementById("disp").value = tan;
+            }
+            function cuadrado() {
+                let cuad = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseFloat(ope1);
+                cuad = ope1 ** (2);
+                document.getElementById("disp").value = cuad;
+            }
+            function factorial() {
+                let fac = 1;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseInt(ope1);
+                for (i = 1; i <= ope1; i++) {
+                    fac = fac * i
+                }
+                document.getElementById("disp").value = fac;
+            }
+            function binario() {
+
+                let bin = 0, ope1 = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseInt(ope1);
+                bin = ope1.toString(2)
+                document.getElementById("disp").value = bin;
+            }
+            function octal() {
+                let oct = 0, ope1 = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseInt(ope1);
+                oct = ope1.toString(8)
+                document.getElementById("disp").value = oct;
+            }
+            function hexadecimal() {
+                let hex = 0, ope1 = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseInt(ope1);
+                hex = ope1.toString(16)
+                document.getElementById("disp").value = hex;
+            }
+            function logaritmo() {
+                let log = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseFloat(ope1);
+                log = Math.log10(ope1);
+                document.getElementById("disp").value = log;
+            }
+            function valorAbs() {
+                let abs = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseFloat(ope1);
+                abs = Math.abs(ope1);
+                document.getElementById("disp").value = abs;
+            }
+            function logaritmoNat() {
+                let log = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseFloat(ope1);
+                log = Math.log(ope1);
+                document.getElementById("disp").value = log;
+            }
+            function expo() {
+                op = 5;
+                ope1 = document.getElementById("disp").value;
+                document.getElementById("disp").value = "";
+
+            }
+            function Pi(){
+                document.getElementById("disp").value = Math.PI;
+            }
+            function siete() {
+                document.getElementById("disp").value = document.getElementById("disp").value + "7";
+            }
+            function ocho() {
+                document.getElementById("disp").value = document.getElementById("disp").value + "8";
+            }
+            function nueve() {
+                document.getElementById("disp").value = document.getElementById("disp").value + "9";
+            }
+
+            function cuatro() {
+                document.getElementById("disp").value = document.getElementById("disp").value + "4";
+            }
+            function cinco() {
+                document.getElementById("disp").value = document.getElementById("disp").value + "5";
+            }
+            function seis() {
+                document.getElementById("disp").value = document.getElementById("disp").value + "6";
+            }
+
+            function uno() {
+                document.getElementById("disp").value = document.getElementById("disp").value + "1";
+            }
+            function dos() {
+                document.getElementById("disp").value = document.getElementById("disp").value + "2";
+            }
+            function tres() {
+                document.getElementById("disp").value = document.getElementById("disp").value + "3";
+            }
+            function cero() {
+
+                document.getElementById("disp").value = document.getElementById("disp").value + "0";
+            }
+            function punto() {
+
+                document.getElementById("disp").value = document.getElementById("disp").value + ".";
+            }
+            function limpiar() {
+                document.getElementById("disp").value = "";
+
+            }
+            function suma() {
+                op = 1;
+                ope1 = document.getElementById("disp").value;
+                document.getElementById("disp").value = "";
+
+            }
+            function resta() {
+                op = 2;
+                ope1 = document.getElementById("disp").value;
+                document.getElementById("disp").value = "";
+
+            }
+
+            function multi() {
+                op = 3
+                ope1 = document.getElementById("disp").value;
+                document.getElementById("disp").value = "";
+            }
+            function divi() {
+                op = 4;
+                ope1 = document.getElementById("disp").value;
+                document.getElementById("disp").value = "";
+
+            }
+
+
+            function porcentaje() {
+
+                let porcen = 0;
+                ope2 = document.getElementById("disp").value;
+                ope2 = parseFloat(ope2);
+                porcen = ope2 / 100;
+                document.getElementById("disp").value = porcen;
+
+            }
+
+            function val() {
+                if (memoria == 0) {
+                    memoria = document.getElementById("disp").value;
+                } else {
+                    document.getElementById("disp").value = memoria;
+                }
+            }
+
+            function x() {
+                let raiz = 0;
+                ope1 = document.getElementById("disp").value;
+                ope1 = parseFloat(ope1);
+                raiz = ope1 ** (1 / 2);
+                document.getElementById("disp").value = raiz;
+            }
+
+
+            function igual() {
+
+                if (document.getElementById("disp").value == "") {
+
+                    ope2 = ope1;
+                }
+                else {
+                    ope2 = document.getElementById("disp").value;
+                }
+
+                ope1 = parseFloat(ope1);
+                ope2 = parseFloat(ope2);
+                switch (op) {
+                    case 1:
+                        resu = ope1 + ope2;
+                        break;
+                    case 2:
+                        resu = ope1 - ope2;
+                        break;
+                    case 3:
+                        resu = ope1 * ope2
+                        break;
+                    case 4:
+
+                        resu = ope1 / op2;
+                        break;
+                    case 5:
+                        resu = ope1 ** (ope2);
+                        break;
+
+                    default:
+                        alert("Opción incorrecta...");
+                }
+
+                document.getElementById("disp").value = resu;
+
+            }
+
+        </script>
+
+        <table border="1">
+            <tr>
+                <td colspan="5" align="center" valign="top">
+                    <input type="text" id="disp" style="text-align:right">
+                </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Sin" onClick="seno()"> </td>
+                <td><input type="button" value="Cos" onClick="coseno()"></td>
+                <td><input type="button" value="Tan" onClick="tangente()"> </td>
+                <td><input type="button" value="X^2" onClick="cuadrado()"> </td>
+                <td><input type="button" value="Fact" onClick="factorial()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Bin" onClick="binario()"> </td>
+                <td><input type="button" value="Oct" onClick="octal()"> </td>
+                <td><input type="button" value="Hex" onClick="hexadecimal()"> </td>
+                <td><input type="button" value="Log" onClick="logaritmo()"> </td>
+                <td><input type="button" value="ABS" onClick="valorAbs()"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Ln" onClick="logaritmoNat()"> </td>
+                <td><input type="button" value="X^y" onClick="expo()"> </td>
+                <td><input type="button" value="PI" onClick="Pi()"> </td>
+                <td><input type="button" value="..." onClick=> </td>
+                <td><input type="button" value="..." onClick=> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onClick="siete();"> </td>
+                <td><input type="button" value="8" onClick="ocho();"> </td>
+                <td><input type="button" value="9" onClick="nueve();"> </td>
+                <td><input type="button" value="*" onClick="multi();"> </td>
+                <td><input type="button" value="/" onClick="divi();"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onClick="cuatro();"> </td>
+                <td><input type="button" value="5" onClick="cinco();"> </td>
+                <td><input type="button" value="6" onClick="seis();"> </td>
+                <td><input type="button" value="+" onClick="suma();"> </td>
+                <td><input type="button" value="-" onClick="resta();"> </td>
+
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onClick="uno();"> </td>
+                <td><input type="button" value="2" onClick="dos();"> </td>
+                <td><input type="button" value="3" onClick="tres();"> </td>
+                <td><input type="button" value="=" onClick="igual();"> </td>
+                <td><input type="button" value="%" onClick="porcentaje();"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onClick="cero();"> </td>
+                <td><input type="button" value="." onClick="punto();"> </td>
+                <td><input type="button" value="C" onClick="limpiar();"> </td>
+                <td><input type="button" value="M1" onClick="mori();">
+                    <input type="button" value="MC" onClick="val=0;">
+                </td>
+                <td><input type="button" value="(X)^1/2" onClick="x();"> </td>
+
+            </tr>
+        </table>
+   
+         
+</body>
+</html>
